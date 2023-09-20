@@ -74,7 +74,7 @@ $(document).ready(function(){
 $('#button').click(function(){
 $.getJSON(apiurl,function(json){
 $.each(json.photos.photo,function(i,myresult){
-apiurl_size = "https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key=YOUR_KEY&photo_id="+myresult.id+"&format=json&nojsoncallback=1";
+apiurl_size = "https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key=34b8a456280a478d579ec3b6e209e9fd&photo_id="+myresult.id+"&format=json&nojsoncallback=1";
 $.getJSON(apiurl_size,function(size){
 $.each(size.sizes.size,function(i,myresult_size){
 if(myresult_size.width==selected_size){
