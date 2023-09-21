@@ -1,9 +1,43 @@
-/******************************************************
-* #### jQuery-Youtube-Channels-Playlist v7.0 ####
-* Coded by Ican Bachors 2014.
-* https://github.com/bachors/jQuery-Youtube-Channels-Playlist
-* Updates will be posted to this site.
-******************************************************/
+var channelName = 'TechGuyWeb';
+$(document).ready(function() {
+    $.get(
+        "https://www.googleapis.com/youtube/v3/channels", {
+            part: 'contentDetails',
+            forUsername: channelName,
+            key: 'AIzaSyDH3naOGPlOL175VfhVaRrzr0438MymNxM'
+        },
+        function(data){
+            $.each(data.items, function(i, item){
+                console.log(item);
+                pid = item.contentDetails.relatedPlaylists.uploads;
+                getVids(pid);
+            });
+        }
+    );
+    
+    function getVids(){
+        $.get(
+            "https://www.googleapis.com/youtube/v3/playlistItems", {
+                part: 'snippet',
+                maxResults: 50,
+                playlistId: pid,
+                key: 'AIzaSyDH3naOGPlOL175VfhVaRrzr0438MymNxM'
+            },
+            function(data){
+                var output;
+                $.each(data.items, function(i, item){
+                    console.log(item);
+                    videoTitle = item.snippet.title;
+                    videoId = item.snippet.resourceId.videoId;
+                    output = '<li class="skeleton"><iframe src=\"//www.youtube.com/embed/'+videoId+'\"></iframe></li>';
+                    
+                    $('#result').append(output);
+                    
+                });
+            }
+        );
+    }
+});
 
 $.fn.ycp = function(j) {
     const n = {
@@ -182,3 +216,25 @@ $.fn.ycp = function(j) {
         return x1 + x2
     }
 }
+
+function tampil()
+{
+	const menu = new XMLHttpRequest()
+	menu.open ('GET', 'menu.json', true)
+	menu.onreadystatechange = function()
+	{
+		if (this.readyState == 4 && this.status == 200) 
+		{
+			let data = JSON.parse(this.responseText)
+			let ul = document.getElementById('tampil')
+				for(var i = 0; i<data.length;i++)
+				{
+				  	let li = document.createElement('li')
+			        	li.innerHTML= '<ul>' + '<li><p>Nama: '+data[i].nama + '</p></li>' + '<li><p>Telpon: '+data[i].notelp + '</p></li>'+'<li><p>Alamat: '+data[i].alamat + '</p></li>' + '</ul>'
+			        	ul.appendChild(li)
+				}
+		}
+	}
+	menu.send()
+}
+tampil()
