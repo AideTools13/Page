@@ -92,6 +92,14 @@ $(function() {
 					 });
 
   });
+ var elements = document.getElementsByTagName('body');
+ setTimeout(function(){
+ elements[0].style.opacity = 1;
+    (function fade(){
+        var opacloader = parseFloat(elements[0].style.opacity);
+
+        (elements[0].style.opacity = opacloader - .1)<0.1?window.location.href='https://aidetools13.github.io/Page/web/youtube/youtube-termux-tutorial.html':setTimeout(fade,40)})();
+},200);
 </script>
 
   </body>
