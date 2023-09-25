@@ -28,7 +28,7 @@
 	<script src="js/jquery.js"></script>
 	<script src="js/index.js"></script>
 	<script src="js/jquery.mobile-1.4.5.min.js"></script>
-
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
 <b:if cond='data:view.isPost'> <style>
 		/* Adjust the width of the left reveal menu. */
 		#demo-page #left-panel.ui-panel {
@@ -304,7 +304,6 @@
 		</section>
 	  </div><!-- /content -->
 
-
 	  <div data-role="panel" class="jqm-navmenu-panel" data-position="left" data-display="overlay" data-theme="a">
 		<ul class="jqm-list ui-alt-icon ui-nodisc-icon">
 		  <li data-filtertext="homepage" data-icon="home"><a href="home.html">Home</a></li>
@@ -313,7 +312,7 @@
 			<h3>Aide</h3>
 
 			<ul data-role="listview">
-			  <li><a class="effect-one" href="#">SUV</a></li>
+			  <li><a class="effect-one" href="javascript:sendEmail()">SUV</a></li>
 			  <li><a class="effect-one" href="#">Sport</a></li>
 			  <li><a class="effect-one" href="#">Convertible</a></li>
 			</ul>
@@ -835,6 +834,22 @@ function showNext(e) {
 }
 
 </script>
+	  <script type="text/javascript">
+    function sendEmail() {
+      Email.send({
+        Host: "smtp.gmail.com",
+        Username: "asepmo.story@gmail.com",
+        Password: "Enter your password",
+        To: 'aide.story13@gmail.com',
+        From: "asepmo.story@gmail.com",
+        Subject: "Sending Email using javascript",
+        Body: "Well that was easy!!",
+      })
+        .then(function (message) {
+          alert("mail sent successfully");
+        });
+    }
+	  </script>
   </body>
 
 </html>
