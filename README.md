@@ -44,6 +44,10 @@
 
 <br clear="both">
 
-<img src="https://raw.githubusercontent.com/maurodesouza/maurodesouza/output/snake.svg" alt="Snake animation" />
+<div align="center">
+  <img height="200" src="https://cdn.dribbble.com/users/119313/screenshots/1681630/media/8e5179ea4d3045dfe6578a1642ffcb33.gif"  />
+</div>
+
+###
 
 ###
