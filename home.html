@@ -28,7 +28,14 @@
 	<script src="js/jquery.js"></script>
 	<script src="js/index.js"></script>
 	<script src="js/jquery.mobile-1.4.5.min.js"></script>
-        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("GgH4fIGq3-nX-t_5Y");
+   })();
+</script>
 <b:if cond='data:view.isPost'> <style>
 		/* Adjust the width of the left reveal menu. */
 		#demo-page #left-panel.ui-panel {
