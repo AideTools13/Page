@@ -120,6 +120,7 @@
             line-height:1;
             margin-right:16px;
 		}
+		@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
 		.article p {
 			margin: 0 0 1em;
 			line-height: 1.5;
@@ -138,9 +139,34 @@
 		.article p:last-child {
 			text-align: right;
 		}
+		.article a {
+           cursor: pointer;
+           text-decoration: none;
+       }
+
 		.article a.ui-btn {
 			margin-right: 2em;
 		}
+	
+		 .effect-one > a {
+            position: relative;
+        }
+         .effect-one > a:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            margin: -5px 0;
+            background-color: white;
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: all 0.4s ease-in-out 0s;
+        }
+         .effect-one > a:hover:before {
+            visibility: visible;
+            transform: scaleX(1);
+        }
 		@media all and (min-width:769px) {
 			.article {
 				max-width: 994px;
@@ -159,6 +185,88 @@
 				-webkit-transform: translate3d(0,0,0);
 			}
 		}
+.cta {
+  display: flex;
+  padding: 11px 33px;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 25px;
+  color: white;
+  background: #6225E6;
+  transition: 1s;
+  box-shadow: 6px 6px 0 black;
+  transform: skewX(-15deg);
+  border: none;
+}
+
+.cta:focus {
+  outline: none;
+}
+
+.cta:hover {
+  transition: 0.5s;
+  box-shadow: 10px 10px 0 #FBC638;
+}
+
+.cta .second {
+  transition: 0.5s;
+  margin-right: 0px;
+}
+
+.cta:hover  .second {
+  transition: 0.5s;
+  margin-right: 45px;
+}
+
+.span {
+  transform: skewX(15deg)
+}
+
+.second {
+  width: 20px;
+  margin-left: 30px;
+  position: relative;
+  top: 12%;
+}
+
+.one {
+  transition: 0.4s;
+  transform: translateX(-60%);
+}
+
+.two {
+  transition: 0.5s;
+  transform: translateX(-30%);
+}
+
+.cta:hover .three {
+  animation: color_anim 1s infinite 0.2s;
+}
+
+.cta:hover .one {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.6s;
+}
+
+.cta:hover .two {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.4s;
+}
+
+@keyframes color_anim {
+  0% {
+    fill: white;
+  }
+
+  50% {
+    fill: #FBC638;
+  }
+
+  100% {
+    fill: white;
+  }
+}
+
 </style></b:if>
   </head>
   <body>
@@ -176,7 +284,7 @@
 		<h1><a href="https://aidetools13.github.io/Page/">AideTools</a></h1>      
 
         <p>Best Tools For A Programmer To Write And Run Script Code On Mobile.</p>
-        <p class="view"><a href="https://github.com/AideTools13">View on GitHub <small>Created By AideTools</small></a></p>
+        <p class="view"><a class="effect-one" href="https://github.com/AideTools13">View on GitHub <small>Created By AideTools</small></a></p>
 		<section>
 		  <h2 id="oauth-callback-successful">Introduction :</h2>
 
@@ -184,8 +292,8 @@
 
 		  <p>What will Be Explained Here is About Tools for Creating Android Applications and Websites. As follows:</p>
 		  <ul>
-			<li><a href="#android-page">Android</a></li>
-			<li><a href="#website-page">Website</a></li>
+			<li><a class="effect-one" href="#android-page">Android</a></li>
+			<li><a class="effect-one" href="#website-page">Website</a></li>
 		  </ul>
 		</section>
 		<section>
@@ -199,15 +307,15 @@
 
 	  <div data-role="panel" class="jqm-navmenu-panel" data-position="left" data-display="overlay" data-theme="a">
 		<ul class="jqm-list ui-alt-icon ui-nodisc-icon">
-		 <li data-filtertext="homepage" data-icon="home"><a href="home.html">Home</a></li>
-		 <li data-role="collapsible" data-inset="false" data-iconpos="right">
+		  <li data-filtertext="homepage" data-icon="home"><a href="home.html">Home</a></li>
+		  <li data-role="collapsible" data-inset="false" data-iconpos="right">
 
 			<h3>Aide</h3>
 
 			<ul data-role="listview">
-			  <li><a href="#">SUV</a></li>
-			  <li><a href="#">Sport</a></li>
-			  <li><a href="#">Convertible</a></li>
+			  <li><a class="effect-one" href="#">SUV</a></li>
+			  <li><a class="effect-one" href="#">Sport</a></li>
+			  <li><a class="effect-one" href="#">Convertible</a></li>
 			</ul>
 
 		  </li><!-- /collapsible -->
@@ -217,13 +325,13 @@
 			<h3>AndroidIde</h3>
 
 			<ul data-role="listview">
-			  <li><a href="web/rest-api.html">Rest Api 🔥</a></li>
-			  <li><a href="web/wiki.html">Web Host</a></li>
-			  <li><a href="web/web-mobile.html">Web Mobile</a></li>
+			  <li><a class="" href="web/rest-api.html">Rest Api 🔥</a></li>
+			  <li><a class="effect-one" href="web/wiki.html">Web Host</a></li>
+			  <li><a class="effect-one" href="web/web-mobile.html">Web Mobile</a></li>
 			</ul>
 
 		  </li><!-- /collapsible -->
-		  
+
 		</ul>
 	  </div><!-- /panel -->
 
@@ -532,18 +640,6 @@
 		</div>
 	  </div><!-- /panel -->
 
-
-	</div><!-- /page -->
-
-
-	<div data-role="page" id="loading-page">
-	  <div role="main" class="ui-content">
-    	<div class="article">
-		  <center>
-			<iframe src="https://gifer.com/embed/74Zu" width="100%" height="100%" style='position:absolute;top:0;left:0;' frameBorder="0" allowFullScreen></iframe>	  
-		  </center>
-		</div><!-- /article -->
-	  </div><!-- /content -->
 	</div><!-- /page -->
 
 	<div data-role="page" id="android-page">
@@ -553,363 +649,192 @@
 	  </div><!-- /header -->
 
 	  <div role="main" class="ui-content">
-
     	<div class="article">
 		  <p><img src="images/ic_android.png" alt="Fixed Gear bike"></p>
-		</div>
-		  <div class="ui-grid-a ui-responsive">
-			<div class="ui-block-a">
-			  <div class="jqm-block-content">
-				<h3>Tentang Android :</h3>
+		</div><!-- Article -->
+		<div class="ui-grid-a ui-responsive">
+		  <div class="ui-block-a">
+			<div class="jqm-block-content">
+			  <h3>Tentang Android :</h3>
 
-				<p class="post-body">Android adalah Sebuah Sistem Operasi Berbasis Linux Dengan Kode Sumber Terbuka Dan Berlisensi <b>APACHE 2.0</b> Yang Dirancang Beragam Untuk Perangkat Bergerak Layar Sentuh Seperti Telepon Pintar Dan Komputer Tablet.<br/>
-				  Android Awalnya Dikembangkan Oleh Android.Inc.Dengan Dukungan Finansial Dari Google. Yang Kemudian Membelinya Pada Tahun 2005.Sistem Operasi Ini Dirilis Secara Resmi Pada Tahun 2007, Bersamaan Dengan DiDirikannya Open Handset Alliance, Konsorsium Dari Perusahaan-perusahaan Perangkat Keras, Perangkat Lunak, Dan Telekomunikasi Yang Bertujuan Untuk Memajukan Standar Terbuka Perangkat Seluler.<br/>Ponsel Android Pertama Mulai Dijual Pada Bulan Oktober 2008.</p>
-				<a href="https://id.m.wikipedia.org/wiki/Android_(sistem_operasi)#" target="_blank">Selanjutnya Tentang <b>Android</b>.</a>
-				<br/>
-			  </div>
+			  <p class="post-body">Android adalah Sebuah Sistem Operasi Berbasis Linux Dengan Kode Sumber Terbuka Dan Berlisensi <b>APACHE 2.0</b> Yang Dirancang Beragam Untuk Perangkat Bergerak Layar Sentuh Seperti Telepon Pintar Dan Komputer Tablet.<br/>
+				Android Awalnya Dikembangkan Oleh Android.Inc.Dengan Dukungan Finansial Dari Google. Yang Kemudian Membelinya Pada Tahun 2005.Sistem Operasi Ini Dirilis Secara Resmi Pada Tahun 2007, Bersamaan Dengan DiDirikannya Open Handset Alliance, Konsorsium Dari Perusahaan-perusahaan Perangkat Keras, Perangkat Lunak, Dan Telekomunikasi Yang Bertujuan Untuk Memajukan Standar Terbuka Perangkat Seluler.<br/>Ponsel Android Pertama Mulai Dijual Pada Bulan Oktober 2008.</p>
+			  <a class="effect-one" href="https://id.m.wikipedia.org/wiki/Android_(sistem_operasi)#" target="_blank">Selanjutnya Tentang <b>Android</b>.</a>
+			  <button class="cta" onclick="showNext(this)">
+				<span class="span">NEXT</span>
+				<span class="second">
+				  <svg width="50px" height="20px" viewBox="0 0 66 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+					<g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+					  <path class="one" d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 C65.7000188,22.2031791 65.6958657,22.2073326 65.6916762,22.2114492 L44.677098,42.8607841 C44.4825957,43.0519059 44.1708242,43.0519358 43.9762853,42.8608513 L40.1545186,39.1069479 C39.9575152,38.9134427 39.9546793,38.5968729 40.1481845,38.3998695 C40.1502893,38.3977268 40.1524132,38.395603 40.1545562,38.3934985 L56.9937789,21.8567812 C57.1908028,21.6632968 57.193672,21.3467273 57.0001876,21.1497035 C56.9980647,21.1475418 56.9959223,21.1453995 56.9937605,21.1432767 L40.1545208,4.60825197 C39.9574869,4.41477773 39.9546013,4.09820839 40.1480756,3.90117456 C40.1501626,3.89904911 40.1522686,3.89694235 40.1543933,3.89485454 Z" fill="#FFFFFF"></path>
+					  <path class="two" d="M20.1543933,3.89485454 L23.9763149,0.139296592 C24.1708311,-0.0518420739 24.4826329,-0.0518571125 24.6771675,0.139262789 L45.6916134,20.7848311 C46.0855801,21.1718824 46.0911863,21.8050225 45.704135,22.1989893 C45.7000188,22.2031791 45.6958657,22.2073326 45.6916762,22.2114492 L24.677098,42.8607841 C24.4825957,43.0519059 24.1708242,43.0519358 23.9762853,42.8608513 L20.1545186,39.1069479 C19.9575152,38.9134427 19.9546793,38.5968729 20.1481845,38.3998695 C20.1502893,38.3977268 20.1524132,38.395603 20.1545562,38.3934985 L36.9937789,21.8567812 C37.1908028,21.6632968 37.193672,21.3467273 37.0001876,21.1497035 C36.9980647,21.1475418 36.9959223,21.1453995 36.9937605,21.1432767 L20.1545208,4.60825197 C19.9574869,4.41477773 19.9546013,4.09820839 20.1480756,3.90117456 C20.1501626,3.89904911 20.1522686,3.89694235 20.1543933,3.89485454 Z" fill="#FFFFFF"></path>
+					  <path class="three" d="M0.154393339,3.89485454 L3.97631488,0.139296592 C4.17083111,-0.0518420739 4.48263286,-0.0518571125 4.67716753,0.139262789 L25.6916134,20.7848311 C26.0855801,21.1718824 26.0911863,21.8050225 25.704135,22.1989893 C25.7000188,22.2031791 25.6958657,22.2073326 25.6916762,22.2114492 L4.67709797,42.8607841 C4.48259567,43.0519059 4.17082418,43.0519358 3.97628526,42.8608513 L0.154518591,39.1069479 C-0.0424848215,38.9134427 -0.0453206733,38.5968729 0.148184538,38.3998695 C0.150289256,38.3977268 0.152413239,38.395603 0.154556228,38.3934985 L16.9937789,21.8567812 C17.1908028,21.6632968 17.193672,21.3467273 17.0001876,21.1497035 C16.9980647,21.1475418 16.9959223,21.1453995 16.9937605,21.1432767 L0.15452076,4.60825197 C-0.0425130651,4.41477773 -0.0453986756,4.09820839 0.148075568,3.90117456 C0.150162624,3.89904911 0.152268631,3.89694235 0.154393339,3.89485454 Z" fill="#FFFFFF"></path>
+					</g>
+				  </svg>
+				</span> 
+			  </button>
+			  <br/>
 			</div>
-			<div class="ui-block-b">
-			  <div class="jqm-block-content">
-				<h3>Apa itu Android Package ?</h3>
-				<p class="post-body">Android Package Adalah Sebuah Perangkat Lunak Yang Dirancang Untuk Dijalankan Pada Perangkat Android. Istilah Ini Juga Mengacu Pada File APK Yang Merupakan Singkatan Dari Android Package. File Ini Adalah Arsip Zip Yang Berisi Kode Aplikasi, Sumber daya, Dan Informasi Meta. Aplikasi Android Dapat Ditulis Dalam Kotlin, Java, dan C++ Dan Dijalankan Di Dalam Mesin Virtual. Lingkungan Pengembangan Resmi Adalah <a href="https://id.m.wikipedia.org/wiki/Android_Studio" target="_blank">Android Studio.</a></p>
-				<p>Dan Yang Akan Dibahas Disini Adalah Tentang Bagaimana Cara Membuat Android Package Langsung Di SmartPhone Berbasis Android Dengan Menggunakan Aplikasi  <a href="https://www.android-ide.com/">Aide</a> Atau <a href="https://androidide.com/">AndroidIde</a>.</p>
-
-				
-				<ul data-role="listview" data-inset="true">
-				  <li data-role="list-divider">Aide<span class="ui-li-count">2</span></li>
-				  <li><a href="index.html">
-					  <h2>Tentang Aide</h2>
-					  <p><strong>You've been invited to a meeting at Filament Group in Boston, MA</strong></p>
-					  <p>Hey Stephen, if you're available at 10am tomorrow, we've got a meeting with the jQuery team.</p>
-					  <p class="ui-li-aside"><strong>6:24</strong>PM</p>
-					</a></li>
-				  <li><a href="index.html">
-					  <h2>Installation</h2>
-					  <p><strong>Boston Conference Planning</strong></p>
-					  <p>In preparation for the upcoming conference in Boston, we need to start gathering a list of sponsors and speakers.</p>
-					  <p class="ui-li-aside"><strong>9:18</strong>AM</p>
-					</a></li>
-				  <li data-role="list-divider">AndroidIde<span class="ui-li-count">1</span></li>
-				  <li><a href="index.html">
-					  <h2>Tentang AndroidIde</h2>
-					  <p><strong>You've been invited to a meeting at Filament Group in Boston, MA</strong></p>
-					  <p>Hey Stephen, if you're available at 10am tomorrow, we've got a meeting with the jQuery team.</p>
-					  <p class="ui-li-aside"><strong>6:24</strong>PM</p>
-					</a></li>
-				  <li><a href="index.html">
-					  <h2>Installation</h2>
-					  <p><strong>Boston Conference Planning</strong></p>
-					  <p>In preparation for the upcoming conference in Boston, we need to start gathering a list of sponsors and speakers.</p>
-					  <p class="ui-li-aside"><strong>9:18</strong>AM</p>
-					</a></li>
-				</ul>
-			  </div>		
-			</div> <!-- /article -->
+		  </div>
+		  <div class="ui-block-b">
+			<div class="jqm-block-content">
+			  <h3>Tentang Android Package ?</h3>
+			  <p class="post-body">Android Package Adalah Sebuah Perangkat Lunak Yang Dirancang Untuk Dijalankan Pada Perangkat Android. Istilah Ini Juga Mengacu Pada File <a href="https://id.m.wikipedia.org/wiki/APK_(format_berkas)" target="_blank">APK</a> Yang Merupakan Singkatan Dari Android Package. File Ini Adalah Arsip Zip Yang Berisi Kode Aplikasi, Sumber daya, Dan Informasi Meta. Aplikasi Android Dapat Ditulis Dalam Kotlin, Java, dan C++ Dan Dijalankan Di Dalam Mesin Virtual. Lingkungan Pengembangan Resmi Adalah <a href="https://id.m.wikipedia.org/wiki/Android_Studio" target="_blank">Android Studio.</a></p>
+			  <p>Dan Yang Akan Dibahas Disini Adalah Tentang Bagaimana Cara Membuat Android Package Langsung Di SmartPhone Berbasis <b>Android</b> Dengan Menggunakan Aplikasi <a href="https://www.android-ide.com/">Aide</a> Atau <a href="https://androidide.com/">AndroidIde</a>.</p>
 
 
-		</div><!-- /content -->
+			  <ul data-role="listview" data-inset="true">
+				<li data-role="list-divider">Aide</li>
+				<li><a href="#aide-intro">
+					<h2>Tentang Aide</h2>
+					<p><strong>Aide Adalah Lingkungan Pengembangan Terpadu (IDE) Untuk Mengembangkan <b>Android Package</b> Secara Langsung Pada Perangkat Android </strong></p>
+					<p>Mengikuti pelajaran coding interaktif dan langkah demi langkah (step by step) menjadi pengembang aplikasi yang handal. Aplikasi desain secara visual, menulis kode dengan fitur editor yang kaya dengan listingan, memeriksa kesalahan secara real time, refactoring dan navigasi smart code, menjalankan aplikasi kamu dengan satu klik dan menggunakan debugger Java untuk menemukan bug.</p>
 
-		<div data-role="panel" id="left-panel">
+				  </a></li>
+				<li><a href="#">
+					<h2>Installation</h2>
+					<p><strong>This guide shows how to install Aide..</strong></p>
+					<p>Before getting started, please make sure that your Android device meets the minimum requirements.</p>
 
-		  <ul data-role="listview">
-			<li data-icon="delete"><a href="#" data-rel="close">Close</a></li>
-			<li data-icon="back"><a href="#demo-intro" data-rel="back">Demo intro</a></li>
-			<li data-role="list-divider">Categories</li>
+				  </a></li>
+				<li data-role="list-divider">AndroidIde</li>
+				<li><a href="https://androidide.com/about-us/">
+					<h2>Tentang AndroidIde</h2>
+					<p><strong>AndroidIDE is an open-source Integrated Development Environment (IDE) for developing Android applications on Android devices. </strong></p>
+					<p>It provides full support for the Gradle build system, Kotlin build support, Java/XML completions, and much more.</p>
 
-			<li data-role="collapsible" data-inset="false" data-iconpos="right">
+				  </a></li>
+				<li><a href="https://androidide.com/docs/installation/">
+					<h2>Installation</h2>
+					<p><strong>This guide shows how to install AndroidIDE, setting up the terminal and the Android build tools installation.</strong></p>
+					<p>Before getting started, please make sure that your Android device meets the minimum requirements.</p>
 
-			  <h3>Aide</h3>
-
-			  <ul data-role="listview">
-				<li><a href="#">Road</a></li>
-				<li><a href="#">ATB</a></li>
-				<li><a href="#">Fixed Gear</a></li>
-				<li><a href="#">Cruiser</a></li>
+				  </a></li>
 			  </ul>
+			</div>		
+		  </div>
+		</div> <!-- /article -->
 
-			</li><!-- /collapsible -->
 
-			<li data-role="collapsible" data-inset="false" data-iconpos="right">
+	  </div><!-- /content -->
 
-			  <h3>Cars</h3>
+	  <div data-role="panel" id="left-panel">
 
-			  <ul data-role="listview">
-				<li><a href="#">SUV</a></li>
-				<li><a href="#">Sport</a></li>
-				<li><a href="#">Convertible</a></li>
-			  </ul>
+		<ul data-role="listview">
+		  <li data-icon="delete"><a href="#" data-rel="close">Close</a></li>
+		  <li data-icon="back"><a href="#demo-intro" data-rel="back">Demo intro</a></li>
+		  <li data-role="list-divider">Categories</li>
 
-			</li><!-- /collapsible -->
+		  <li data-role="collapsible" data-inset="false" data-iconpos="right">
 
-			<li data-role="collapsible" data-inset="false" data-iconpos="right">
+			<h3>Aide</h3>
 
-			  <h3>Tutorial</h3>
+			<ul data-role="listview">
+			  <li><a class="effect-one" href="#">Road</a></li>
+			  <li><a class="effect-one" href="#">ATB</a></li>
+			  <li><a class="effect-one" href="#">Fixed Gear</a></li>
+			  <li><a class="effect-one" href="#">Cruiser</a></li>
+			</ul>
 
-			  <ul data-role="listview">
-				<li><a href="web/rest-api.html">Rest Api 🔥</a></li>
-				<li><a href="web/wiki.html">Web Host</a></li>
-				<li><a href="web/web-mobile.html">Web Mobile</a></li>
-			  </ul>
+		  </li><!-- /collapsible -->
 
-			</li><!-- /collapsible -->
+		  <li data-role="collapsible" data-inset="false" data-iconpos="right">
 
+			<h3>Cars</h3>
+
+			<ul data-role="listview">
+			  <li><a href="#">SUV</a></li>
+			  <li><a href="#">Sport</a></li>
+			  <li><a href="#">Convertible</a></li>
+			</ul>
+
+		  </li><!-- /collapsible -->
+
+		  <li data-role="collapsible" data-inset="false" data-iconpos="right">
+
+			<h3>Tutorial</h3>
+
+			<ul data-role="listview">
+			  <li><a href="web/rest-api.html">Rest Api 🔥</a></li>
+			  <li><a href="web/wiki.html">Web Host</a></li>
+			  <li><a href="web/web-mobile.html">Web Mobile</a></li>
+			</ul>
+
+		  </li><!-- /collapsible -->
+
+		</ul>
+
+	  </div><!-- /panel -->
+
+	</div><!-- /page -->
+
+	<div data-role="page" id="aide-intro">
+	  <div data-role="header">
+		<h1>Tentang Aide</h1>
+		<a href="#demo-intro" data-icon="arrow-l" data-iconpos="notext" data-shadow="false" data-iconshadow="false">Menu</a>
+	  </div><!-- /header -->
+
+	  <div role="main" class="ui-content">
+		<div class="article">
+		  <p><img src="images/aide-ide-for-android-java-c-icon.png" alt="Aide"></p>	  
+
+		  <p class="post-body">Aide dalah sebuah lingkungan pengembangan terpadu (IDE) untuk mengembangkan aplikasi Android secara langsung pada perangkat Android kamu. Mengikuti pelajaran coding interaktif dan langkah demi langkah (step by step) menjadi pengembang aplikasi yang handal. Aplikasi desain secara visual, menulis kode dengan fitur editor yang kaya dengan listingan, memeriksa kesalahan secara real time, refactoring dan navigasi smart code, menjalankan aplikasi kamu dengan satu klik dan menggunakan debugger Java untuk menemukan bug.</p>
+		  <p><img src="images/aide-aplikasi-untuk-membuat-aplikasi-di-android.png" alt="Aide"></p>	  
+
+		  <p class="post-body">Fitur pelajaran yang interaktif dengan petunjuk langkah demi langkah (step by step) untuk belajar pengembangan aplikasi Android dan keterampilan pemrograman Java. Mengikuti pelajaran, mencoba menjadi ahli coding dan menerapkan apa yang kamu pelajari dalam proyek aplikasi kamu sendiri. AIDE akan mengubah tablet Android kamu dengan keyboard ke dalam "Grid" pembangunan aplikasi yang nyata. Sang Pengembang Aplikasi ini menggunakan Transformer Prime kode dengan AIDE.</p>
+		  <p><img src="images/aide-for-android-apk.png" alt="Aide"></p>	  
+
+		  <h2 id="oauth-callback-successful">Ulasan Fitur dari AIDE IDE for Android Java C++</h2>
+		  <h3>Belajar Kode (in app purchase):</h3>
+		  <ul>
+			<li>Pelajaran yang Interaktif dengan petunjuk langkah demi langkah (step by step).</li>
+			<li>Android Wear</li>
+			<li>Kursus pemrograman Java</li>
+			<li>Kursus pengembangan Android</li>
+			<li>Kursus pengembangan game</li>
 		  </ul>
-
-		</div><!-- /panel -->
-
-		<div data-role="panel" id="right-panel" data-display="overlay" data-position="right">
-
-		  <ul data-role="listview" data-icon="false">
-			<li data-icon="delete"><a href="#" data-rel="close">Close</a></li>
-			<li data-role="list-divider">Share this page</li>
-			<li><a href="#">Twitter</a></li>
-			<li><a href="#">Facebook</a></li>
-			<li><a href="#">Google +</a></li>
-			<li><a href="#">Mail</a></li>
+		  <h3>Siklus edit compile run:</h3>
+		  <ul>
+			<li>Buat contoh (Sampel App) dengan satu klik.</li>
+			<li>Membangun aplikasi C/C++ NDK</li>
+			<li>Membangun aplikasi Java konsol murni</li>
+			<li>Membangun Java Apps/Xml</li>
+			<li>Jalankan App kamu dengan satu klik</li>
+			<li>Tidak membutuhkan akses root</li>
+			<li>Incremental kompilasi</li>
+			<li>Menggunakan Eclipse .classpath Format proyek untuk kompatibilitas.</li>
+			<li>Open standar proyek Android Studio</li>
+			<li>Penampil Integrated LogCat</li>
 		  </ul>
-
-		</div><!-- /panel -->
-
-	  </div><!-- /page -->
-	  <div data-role="page" id="website-page">
-
-		<div data-role="header">
-		  <h1>Website</h1>
-		  <a href="#left-panel" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false">Menu</a>
-		</div><!-- /header -->
-
-		<div role="main" class="ui-content">
-
-		  <div class="article">
-			<p><img src="images/bike.jpg" alt="Fixed Gear bike"></p>
-
-			<p><a href="#right-panel" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini">Share</a></p>
-
-		  </div><!-- /article -->
-
-		</div><!-- /content -->
-
-		<div data-role="panel" id="left-panel">
-
-		  <ul data-role="listview">
-			<li data-icon="delete"><a href="#" data-rel="close">Close</a></li>
-			<li data-icon="back"><a href="#demo-intro" data-rel="back">Demo intro</a></li>
-			<li data-role="list-divider">Categories</li>
-
-
-			<div data-role="page" id="loading-page">
-			  <div role="main" class="ui-content">
-				<div class="article">
-				  <center>
-					<iframe src="https://gifer.com/embed/74Zu" width="100%" height="100%" style='position:absolute;top:0;left:0;' frameBorder="0" allowFullScreen></iframe>	  
-				  </center>
-				</div><!-- /article -->
-			  </div><!-- /content -->
-			</div><!-- /page -->
-
-			<div data-role="page" id="android-page">
-			  <div data-role="header">
-				<h1>Android</h1>
-				<a href="#left-panel" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false">Menu</a>
-			  </div><!-- /header -->
-
-			  <div role="main" class="ui-content">
-
-				<p><img src="images/ic_android.png" alt="Fixed Gear bike"></p>
-
-				<div class="ui-grid-a ui-responsive">
-				  <div class="ui-block-a">
-					<div class="jqm-block-content">
-					  <h3>Aide</h3>
-
-					  <p><a href="#" data-ajax="false">Installation</a></p>
-					  <p><a href="#" data-ajax="false">Android Sdk & Ndk</a></p>
-					  <p><a href="#" data-ajax="false">Project</a></p>
-					  <p><a href="#" data-ajax="false">Tutorial</a></p>
-					</div>
-				  </div>
-				  <div class="ui-block-b">
-					<div class="jqm-block-content">
-					  <h3>AndroidIde</h3>
-					  <p><a href="#" data-ajax="false">Installation</a></p>
-					  <p><a href="#" data-ajax="false">Android Sdk & Ndk</a></p>
-					  <p><a href="#" data-ajax="false">Project</a></p>
-					  <p><a href="#" data-ajax="false">Tutorial</a></p>
-					</div>
-				  </div>        	
-				</div><!-- /menu -->
-
-				<p><a href="#right-panel" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini">Share</a></p>
-
-			  </div><!-- /content -->
-
-			  <div data-role="panel" id="left-panel">
-
-				<ul data-role="listview">
-				  <li data-icon="delete"><a href="#" data-rel="close">Close</a></li>
-				  <li data-icon="back"><a href="#demo-intro" data-rel="back">Demo intro</a></li>
-				  <li data-role="list-divider">Categories</li>
-
-				  <li data-role="collapsible" data-inset="false" data-iconpos="right">
-
-					<h3>Bikes</h3>
-
-					<ul data-role="listview">
-					  <li><a href="#">Road</a></li>
-					  <li><a href="#">ATB</a></li>
-					  <li><a href="#">Fixed Gear</a></li>
-					  <li><a href="#">Cruiser</a></li>
-					</ul>
-
-				  </li><!-- /collapsible -->
-
-				  <li data-role="collapsible" data-inset="false" data-iconpos="right">
-
-					<h3>Cars</h3>
-
-					<ul data-role="listview">
-					  <li><a href="#">SUV</a></li>
-					  <li><a href="#">Sport</a></li>
-					  <li><a href="#">Convertible</a></li>
-					</ul>
-
-				  </li><!-- /collapsible -->
-
-				  <li data-role="collapsible" data-inset="false" data-iconpos="right">
-
-					<h3>Boats</h3>
-
-					<ul data-role="listview">
-					  <li><a href="#">Runabout</a></li>
-					  <li><a href="#">Motorboat</a></li>
-					  <li><a href="#">Sailboat</a></li>
-					</ul>
-
-				  </li><!-- /collapsible -->
-
-				</ul>
-
-			  </div><!-- /panel -->
-
-			  <div data-role="panel" id="right-panel" data-display="overlay" data-position="right">
-
-				<ul data-role="listview" data-icon="false">
-				  <li data-icon="delete"><a href="#" data-rel="close">Close</a></li>
-				  <li data-role="list-divider">Share this page</li>
-				  <li><a href="#">Twitter</a></li>
-				  <li><a href="#">Facebook</a></li>
-				  <li><a href="#">Google +</a></li>
-				  <li><a href="#">Mail</a></li>
-				</ul>
-
-			  </div><!-- /panel -->
-
-			</div><!-- /page -->
-
-			<div data-role="page" id="website-page">
-
-			  <div data-role="header">
-				<h1>Website</h1>
-				<a href="#left-panel" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false">Menu</a>
-			  </div><!-- /header -->
-
-			  <div role="main" class="ui-content">
-
-				<div class="article">
-				  <p><img src="images/bike.jpg" alt="Fixed Gear bike"></p>
-
-				</div><!-- /article -->
-				<div class="ui-grid-a ui-responsive">
-				  <div class="ui-block-a">
-					<div class="jqm-block-content">
-					  <h3>Pages &amp; Navigation</h3>
-
-					  <p><a href="pages/" data-ajax="false">Pages</a></p>
-					  <p><a href="navigation/" data-ajax="false">Navigation</a></p>
-					  <p><a href="loader/" data-ajax="false">Loader</a></p>
-					  <p><a href="transitions/" data-ajax="false">Transitions</a></p>
-					</div>
-				  </div>
-				  <div class="ui-block-b">
-					<div class="jqm-block-content">
-					  <h3>CSS Framework</h3>
-
-					  <p><a href="theme-default/" data-ajax="false">Theming</a></p>
-					  <p><a href="button-markup/" data-ajax="false">Buttons</a></p>
-					  <p><a href="icons/" data-ajax="false">Icons</a></p>
-					  <p><a href="grids/" data-ajax="false">Grids</a></p>
-					  <p><a href="../body-bar-classes/" data-ajax="false">Body and bar classes</a></p>
-					</div>
-				  </div>        	
-				</div><!-- /menu -->
-
-				<p><a href="#right-panel" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini">Share</a></p>
-
-			  </div><!-- /content -->
-
-
-			  <div data-role="panel" id="left-panel">
-
-				<ul data-role="listview">
-				  <li data-icon="delete"><a href="#" data-rel="close">Close</a></li>
-				  <li data-icon="back"><a href="#demo-intro" data-rel="back">Demo intro</a></li>
-				  <li data-role="list-divider">Categories</li>
-
-				  <li data-role="collapsible" data-inset="false" data-iconpos="right">
-
-					<h3>Bikes</h3>
-
-					<ul data-role="listview">
-					  <li><a href="#">Road</a></li>
-					  <li><a href="#">ATB</a></li>
-					  <li><a href="#">Fixed Gear</a></li>
-					  <li><a href="#">Cruiser</a></li>
-					</ul>
-
-				  </li><!-- /collapsible -->
-
-				  <li data-role="collapsible" data-inset="false" data-iconpos="right">
-
-					<h3>Cars</h3>
-
-					<ul data-role="listview">
-					  <li><a href="#">SUV</a></li>
-					  <li><a href="#">Sport</a></li>
-					  <li><a href="#">Convertible</a></li>
-					</ul>
-
-				  </li><!-- /collapsible -->
-
-				  <li data-role="collapsible" data-inset="false" data-iconpos="right">
-
-					<h3>Boats</h3>
-
-					<ul data-role="listview">
-					  <li><a href="#">Runabout</a></li>
-					  <li><a href="#">Motorboat</a></li>
-					  <li><a href="#">Sailboat</a></li>
-					</ul>
-
-				  </li><!-- /collapsible -->
-
-				</ul>
-
-			  </div><!-- /panel -->
-
-			  <div data-role="panel" id="right-panel" data-display="overlay" data-position="right">
-
-				<ul data-role="listview" data-icon="false">
-				  <li data-icon="delete"><a href="#" data-rel="close">Close</a></li>
-				  <li data-role="list-divider">Share this page</li>
-				  <li><a href="#">Twitter</a></li>
-				  <li><a href="#">Facebook</a></li>
-				  <li><a href="#">Google +</a></li>
-				  <li><a href="#">Mail</a></li>
-				</ul>
-
-			  </div><!-- /panel -->
-
-			</div><!-- /page -->
+		</div>
+	  </div> 
+	</div><!-- /panel -->
+
+	<div data-role="page" id="website-page">
+	  <div data-role="header">
+        <h1>Website</h1>
+        <a href="#left-panel" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false">Menu</a>
+	  </div><!-- /header -->
+
+	  <div role="main" class="ui-content">
+    	<div class="article">
+		  <p><img src="images/ic_android.png" alt="Fixed Gear bike"></p>
+
+		</div><!-- /article -->
+	  </div><!-- /content -->
+	</div><!-- /page -->
+<script> 
+function showNext(e) {
+	var elements = document.getElementsByTagName('body');
+	setTimeout(function() {
+				   elements[0].style.opacity = 1;
+				   (function fade() {
+					   var opacloader = parseFloat(elements[0].style.opacity);
+
+					   (elements[0].style.opacity = opacloader - .1) < 0.1 ?window.location.href = 'https://id.m.wikipedia.org/wiki/Android_(sistem_operasi)#': setTimeout(fade, 40);})();
+			   }, 5000);   
+}
+
+</script>
   </body>
 
 </html>
