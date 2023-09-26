@@ -17,7 +17,7 @@ jobs:
       # - run: npm ci && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          repoToken: "${{ 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 }}"
-          firebaseServiceAccount: "${{ AAAA0_-oYSY:APA91bEuUaLPNnFg1k6HV324B9ep_cK-Lfc7CSOj8u0cQKyxLeTF0Tdbuf27hGFCpSgsbfUhqKz1vgDJOMtMEnzuOD1xH27frem6wgzil-iJrpSJWbIqRTWMfQ5NH3wfMmFBgWThbtKV }}"
-          projectId: your-Firebase-project-ID
+          repoToken: "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"
+          firebaseServiceAccount: "AAAA0_-oYSY:APA91bEuUaLPNnFg1k6HV324B9ep_cK-Lfc7CSOj8u0cQKyxLeTF0Tdbuf27hGFCpSgsbfUhqKz1vgDJOMtMEnzuOD1xH27frem6wgzil-iJrpSJWbIqRTWMfQ5NH3wfMmFBgWThbtKV"
+          projectId: asepmo-b64e3 
           channelId: live
